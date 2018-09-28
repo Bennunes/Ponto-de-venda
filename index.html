@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>PDV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        
+    </head>
+    
+    <body>
+        <h1>Carrinho de compras</h1>
+        <label for = "cliente">Cliente:</label> <input type = "text" id = "cliente">
+        <label for = "data">Data:</label> <input type = "date" id = "data">
+      <div class = "buttons"> 
+        <button onclick = "novaVenda()" id = "novo">Nova venda</button>
+      </div>
+        
+        <!-- <button disabled class = "vendaDisponivel" onclick = "" >Fechar Vendar</button>
+        <button disabled class = "vendaDisponivel" onclick = "" >Cancelar</button> --> 
+        
+        <fieldset class = "vendaDisponivel" >
+            <legend>Nota Fiscal</legend>
+            <!-- -->
+            <label for = "selecao">Produto:</label>
+            <select id = "selecao">
+            <!--<option>Selecione</option>-->
+            </select>
+          
+            <label for = "cliente">Quantidade:</label> <input type = "number" min = "1" id = "qtde">
+          
+            <button onclick = "addItem()" >Incluir</button>
+          
+          <!-- -->
+            <fieldset>
+                <table>
+                  <thead>
+                    <th>Produto</th><th>Img</th><th>Qtde</th><th>Valor</th><th>Total</th>
+                  </thead>
+                  <tbody id = "lista"></tbody>
+                  <tfoot>
+                    
+                  </tfoot>
+                </table>
+            </fieldset>
+        </fieldset>  
+        <script src = "js/funcoes.js"></script>
+    </body>
+</html>
